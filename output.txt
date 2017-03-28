@@ -1,0 +1,89 @@
+>>> exec(open("/home/sheetal/PycharmProjects/Information_Retrieval/index.py").read())
+>>> a=index('/home/sheetal/PycharmProjects/IR/collection/')
+Index built in  1.6673815250396729 seconds
+>>> x=a.and_query(['nuclear', 'power', 'country','war','communist'])
+Results for the Query:  nuclear AND power AND country AND war AND communist
+Total Docs retrieved:  5
+Text-47.txt
+Text-315.txt
+Text-343.txt
+Text-290.txt
+Text-271.txt
+Retrieved in  0.0008852481842041016  seconds
+>>> x=a.and_query(['with', 'without', 'yemen'])
+Results for the Query:  with AND without AND yemen
+Total Docs retrieved:  6
+Text-99.txt
+Text-121.txt
+Text-115.txt
+Text-86.txt
+Text-159.txt
+Text-117.txt
+Retrieved in  0.0006833076477050781  seconds
+>>> x=a.and_query(['with', 'without', 'yemen','yemeni'])
+Results for the Query:  with AND without AND yemen AND yemeni
+Total Docs retrieved:  2
+Text-99.txt
+Text-121.txt
+Retrieved in  0.0006864070892333984  seconds
+>>> x=a.and_query(['nuclear', 'power'])
+Results for the Query:  nuclear AND power
+Total Docs retrieved:  17
+Text-228.txt
+Text-32.txt
+Text-1.txt
+Text-418.txt
+Text-173.txt
+Text-306.txt
+Text-71.txt
+Text-272.txt
+Text-379.txt
+Text-47.txt
+Text-191.txt
+Text-315.txt
+Text-295.txt
+Text-343.txt
+Text-290.txt
+Text-271.txt
+Text-275.txt
+Retrieved in  0.0005521774291992188  seconds
+>>> x=a.and_query(['russia', 'chinese','enemy'])
+Results for the Query:  russia AND chinese AND enemy
+Total Docs retrieved:  3
+Text-111.txt
+Text-329.txt
+Text-343.txt
+Retrieved in  0.0005803108215332031  seconds
+>>> x=a.and_query(['textile', 'industry'])
+Results for the Query:  textile AND industry
+Total Docs retrieved:  2
+Text-222.txt
+Text-77.txt
+Retrieved in  0.0005018711090087891  seconds
+>>> x=a.print_dict()
+......................
+......................
+zone [(2, [107]), (12, [575]), (57, [121]), (70, [96]), (80, [77]), (177, [274]), (200, [84]), (209, [1671]), (250, [194]), (346, [325]), (357, [234]), (368, [73, 485])]
+zones [(139, [426]), (234, [754]), (367, [494])]
+zoo [(202, [176, 365]), (218, [83])]
+zoom [(28, [614])]
+zoomed [(371, [799])]
+......................
+......................
+>>> x=a.print_doc_list()
+......................
+......................
+Doc ID: 409 ==> Text-117.txt
+Doc ID: 410 ==> Text-137.txt
+Doc ID: 411 ==> Text-267.txt
+Doc ID: 412 ==> Text-364.txt
+Doc ID: 413 ==> Text-5.txt
+Doc ID: 414 ==> Text-421.txt
+Doc ID: 415 ==> Text-134.txt
+Doc ID: 416 ==> Text-257.txt
+Doc ID: 417 ==> Text-217.txt
+Doc ID: 418 ==> Text-300.txt
+Doc ID: 419 ==> Text-357.txt
+......................
+......................
+
